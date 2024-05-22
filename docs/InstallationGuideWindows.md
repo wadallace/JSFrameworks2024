@@ -1,10 +1,12 @@
 # What You Will Be Installing - Windows
 
+If you are viewing this in Visual Studio Code, press `ctrl + shift + v` to open this in preview mode.
+
 ## For Those Who Took the JavaScript Fundamentals Class
 
 If you took the fundamentals class and followed the previous installation guide, you will just need to upgrade a few things and install some Node.js packages.
 
-First, go to the [Node.js download page](https://nodejs.org/en/) and download the _LTS version_ (version 18.x as of June 2023) and reinstall Node.js.
+First, go to the [Node.js download page](https://nodejs.org/en/) and download the _LTS version_ (version 20.x as of June 2024) and reinstall Node.js.
 
 Then, you will need to open Git Bash and run these commands:
 
@@ -28,7 +30,7 @@ This is what you will be installing today:
 2. Visual Studio Code (Recommended) and Plugins
 3. Git for Windows and Github
 4. Node.js (latest LTS version) and NPM Packages
-5. Chrome or Firefox and Extensions
+5. React Developer Tools browser extension
 
 ### Microsoft Teams
 
@@ -52,11 +54,11 @@ Continue with the installer. When it finishes, Visual Studio Code should open. W
 
 ### Git for Windows and Github
 
-You will need to [create a Github account](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home) if you do not have one.
-
 **We would like you to install Git Bash because it supports Unix style commands. If you have Git installed but not Git Bash, then you should remove Git and follow the instruction below to reinstall.**
 
 Git is version control software. It is used for sharing code, combining team members' code and managing different versions of your code.
+
+You will need to [create a Github account](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home) if you do not have one.
 
 To install git, got to https://git-scm.com/downloads and click on _Windows_.
 
@@ -78,25 +80,27 @@ We recommend you select _Use Visual Studio Code as Git's default editor_ from th
 
 To avoid unnecessary merge conflicts (believe me, merge conflicts are very frustrating), please make sure _Checkout Windows-style, commit Unix-style line endings_ is selected.
 
-When you finish installing, you should see Git Bash on your computer. Open it, type `git --version` to confirm that it works. You should see something like _git version 2.40.1_. Then close out of Git Bash.
+When you finish installing, you should see Git Bash on your computer. Open it, type `git --version` to confirm that it works.
 
 ### Node.js and NPM Packages
 
 Node.js is a JavaScript runtime engine. It allows you to run JavaScript programs outside of Chrome, Safari, Edge or another web browser.
 
-You will need to have the latest _LTS_ version of Node installed as of June 2023 (18.x). If you already have Node.js installed, type `node -v` in Git Bash. If you do not have the latest version, you will need to remove Node.js and reinstall it again.
+You will need to have the latest LTS version of Node installed as of June 2024 (20.x). If you already have Node.js installed, type `node -v` in Git Bash. If you do not have the latest version, you will need to reinstall it again.
 
-If Node.js is up-to-date, you should update NPM. You can update it with:
-
-```bash
-npm install -g npm@latest
-```
-
-To install Node.js, go to https://nodejs.org/en/ and click on the _18.X.X LTS_ version.
+To install or resinstall Node.js, go to https://nodejs.org/en/ and click on the _20.x.x LTS_ version.
 
 When it finishes downloading, open the downloaded file. Accept the License Agreement and all of the defaults. If you are asked to allow the app to make changes to your device, click on _Yes_.
 
 When it’s finished installing, open Git Bash and type `node -v` to confirm that it has installed. If you had Git Bash open before installing Node.js and you get an error, try reopening Git Bash and see if this resolves the issue.
+
+#### NPM
+
+Update NPM with:
+
+```bash
+npm install -g npm@latest
+```
 
 #### ESLint
 
@@ -116,11 +120,16 @@ When it’s finished, type `eslint -v` in Git Bash to confirm it has installed.
 
 #### Setting Git Bash as your Default Shell
 
-In Visual Studio Code, press `ctrl+shift+p`, search for _terminal_ and select _Terminal: Select Default Profile_. Then choose _Git Bash_.
+In Visual Studio Code, press `ctrl + shift + p`, search for _terminal_ and select _Terminal: Select Default Profile_. Then choose _Git Bash_.
 
 ![](install-screens/vscode-windows-shell.png)
 
-Press `` ctrl+` ``. If Git Bash opens inside of Visual Studio Code, then it worked.
+Reopen your terminal window:
+
+- In your main menu, go to "View" > "Terminal". This should close the terminal.
+- Repeat. This should open the terminal window.
+
+If Git Bash opens inside of Visual Studio Code, then it worked.
 
 ![](install-screens/vscode-git-bash.png)
 
@@ -132,34 +141,38 @@ Open the Extensions tab on the left, search for _ESLint_ and install _ESLint_.
 
 Once its installed, the _Install_ button may have transformed into a _Reload_ button. If you see _Reload_, click on it.
 
+#### Bracket Colorization Setting
+
+Bracket Colorization is a simple setting that makes it much easier to debug issues with closes curly braces, brackets, and parentheses. To enable, press `ctrl + shift + p`. Search for _settings_ and click on _Open Settings (UI)_.
+
+![](install-screens/settings-search.png)
+
+Then search for _bracket pair colorizer_. You should see the setting _Editor > Bracket Pair Colorization_. Click on the checkbox to enable it.
+
+![](install-screens/vscode-color-brackets.png)
+
 #### Prettier Extension (Optional)
 
 Prettier automatically formats your code and you can configure it to format your code whenever you save a file. Using this is optional for now but we will require it for group projects.
 
 If you would like to use prettier, search for _Prettier_ in the Extensions tab on the left and install _Prettier - Code formatter_. Once its installed, click on _Reload_ if necessary.
 
-You can now adjust Visual Studio's settings so that it will format on save and will play nicely with Prettier's defaults. Press `command+shift+p,` search for _settings_ and click on _Preferences: Open Settings (JSON))_.
+You can now adjust Visual Studio's settings so that it will format on save and will play nicely with Prettier's defaults. Press `ctrl + shift + p,` search for _settings_ and click on _Preferences: Open Settings (JSON))_.
 
 ![](install-screens/settings-search.png)
 
 Paste the following into the JSON file. Do not overwrite any settings that you already have.
 
 ```json
-{
-  // ...
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
-  "editor.tabSize": 2
-  // ...
-}
+  "editor.tabSize": 2,
 ```
 
-### Chrome or Firefox and Extensions
+### React Developer Tools Browser Extension
 
-You are required to use Chrome or Firefox because the React and Redux extensions for debugging your code are only available for these browsers. We recommend Chrome because we will be demonstrating Chrome's tools in class, but you are free to download any of following:
+You are required to use Chrome, Firefox, or Microsoft Edge because the [_React Developer Tools extension_](https://react.dev/learn/react-developer-tools) for debugging your code are only available on these browsers. We recommend Chrome because we will be demonstrating Chrome's tools in class.
 
-- [Chrome](https://www.google.com/chrome/) & [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
-- [Firefox](https://www.mozilla.org/en-US/firefox/) & [React Developer Tools for Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
-- Microsoft Edge & [React Developer Tools for Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
-
-We will also ask you install the _React Developer Tools_ extension as well. See the links above.
+- [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+- [React Developer Tools for Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
+- [React Developer Tools for Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) (Yes, you can install Microsoft Edge on Mac.)the _React Developer Tools_ extension as well. See the links above.

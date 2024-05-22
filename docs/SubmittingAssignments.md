@@ -31,7 +31,7 @@ You will then need to make pull request from Github if you do not have one alrea
 
 ![Open your repositories in Github](img/git-your-repositories.png)
 
-4. Select _JSFrameworks2023_
+4. Select _JSFrameworks2024_
 5. Click on the "Contribute" dropdown and click on the "Open pull request" button
 
 ![Opening a pull request](img/open-pull-request.png)
