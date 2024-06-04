@@ -5,6 +5,7 @@
 
 # Students
 
+- Noe
 - Danielle Smith
 - Ken Tealsey
 - Michael Sementsov
