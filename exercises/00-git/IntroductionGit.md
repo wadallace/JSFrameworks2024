@@ -9,5 +9,5 @@
 - Michael Sementsov
 - Megan Starrington
 - Wade Wallace
-
-Joseph Stella
+- Jeff Han
+- Joseph Stella
