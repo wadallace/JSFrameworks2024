@@ -5,5 +5,6 @@
 
 # Students
 
+- Michael Sementsov
 - Megan Starrington
 - Wade Wallace
