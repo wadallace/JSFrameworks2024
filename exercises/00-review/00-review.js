@@ -153,8 +153,7 @@ const getTempOfTomorrow = () => {
   }
 
   // Start of what you should change
-  const today = AVG_TEMPERATURES.today
-  const tomorrow = AVG_TEMPERATURES.tomorrow
+  const { today, tomorrow } = AVG_TEMPERATURES
   // End of what you should change
   return `Today's temperature is ${today}.\nTomorrow's temperature is ${tomorrow}`
 }
@@ -172,6 +171,7 @@ const getTempOfTomorrow = () => {
  */
 const addItems = (arr) => {
   // Write your answer here
+  return arr.reduce((total, num) => (total += num))
 }
 
 /**
@@ -188,6 +188,7 @@ const addItems = (arr) => {
 const removeDuplicates = (array) => {
   // Write your answer here
   // Return an array of unique values
+  return [...new Set([...array])]
 }
 
 /**
