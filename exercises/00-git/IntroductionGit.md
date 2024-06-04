@@ -5,6 +5,7 @@
 
 # Students
 
+- Danielle Smith
 - Ken Tealsey
 - Michael Sementsov
 - Megan Starrington
