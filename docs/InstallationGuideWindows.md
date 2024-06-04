@@ -13,6 +13,7 @@ Then, you will need to open Git Bash and run these commands:
 ```
 git update-git-for-windows
 npm install -g npm@latest
+npm install -g create-vite@latest
 npm install -g eslint@latest
 npm install -g eslint-plugin-react
 npm install -g eslint-plugin-react-hooks
@@ -100,6 +101,14 @@ Update NPM with:
 
 ```bash
 npm install -g npm@latest
+```
+
+#### Vite.js
+
+Vite.js is like a "React start kit." It installs and sets up a React application.
+
+```bash
+npm install -g create-vite@latest
 ```
 
 #### ESLint
