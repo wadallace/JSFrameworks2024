@@ -1,4 +1,5 @@
 # Instructors
+Jamal Taylor
 
 - Matina
 
