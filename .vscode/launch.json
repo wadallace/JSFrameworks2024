@@ -1,0 +1,22 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "00-review",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/exercises/00-review/",
+      "program": "${workspaceFolder}/exercises/00-review/node_modules/mocha/bin/_mocha",
+      "args": [
+        "--timeout",
+        "999999",
+        "--colors",
+        "${workspaceFolder}/exercises/00-review/test/**/*.spec.js"
+      ],
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}
