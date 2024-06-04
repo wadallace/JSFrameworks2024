@@ -9,3 +9,4 @@
 - Michael Sementsov
 - Megan Starrington
 - Wade Wallace
+- Alisha Lavigne
