@@ -1,3 +1,4 @@
 # Instructors
 
 # Students
+Danielle Smith
