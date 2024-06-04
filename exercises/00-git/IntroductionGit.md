@@ -1,3 +1,4 @@
 # Instructors
+Jamal Taylor
 
 # Students
