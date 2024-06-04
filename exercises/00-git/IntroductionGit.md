@@ -12,3 +12,4 @@
 - Alisha Lavigne
 - Jeff Han
 - Joseph Stella
+- Chris
