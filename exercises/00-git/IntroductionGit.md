@@ -1,7 +1,9 @@
 # Instructors
-Jamal Taylor
 
+- Jamal Taylor
 - Matina
 
 # Students
-Wade Wallace
+
+- Megan Starrington
+- Wade Wallace
