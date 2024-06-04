@@ -1,5 +1,10 @@
 # Instructors
 
+- Jamal Taylor
+- Matina
+
 # Students
 
-Michael Sementsov
+- Michael Sementsov
+- Megan Starrington
+- Wade Wallace
