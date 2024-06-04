@@ -1,3 +1,4 @@
+import greet from './greet.js'
 /**
  * Solve this problem using ES modules (ESM).
  * ES modules allow you break up your code into multiple files (or modules), and then share code between different files.
@@ -33,7 +34,8 @@ const greet = (name) => {
 
 const highestNumber = (array) => {
   // Write your answer here
-};
+  return Math.max(...array)
+}
 
 /**
  * Combine an array by using the spread operator
@@ -46,7 +48,8 @@ const highestNumber = (array) => {
 
 const combineArray = (array1, array2) => {
   // Write your answer here
-};
+  return [...array1, ...array2]
+}
 
 /**
  * Combine two objects into one
@@ -57,7 +60,8 @@ const combineArray = (array1, array2) => {
 
 const combineObject = (obj1, obj2) => {
   // Write your answer here
-};
+  return { ...obj1, ...obj2 }
+}
 
 /**
  * Please use the higher order function map to solve this problem.
@@ -68,7 +72,8 @@ const combineObject = (obj1, obj2) => {
 
 const doubleValues = (arr) => {
   // Write your answer here
-};
+  return arr.map((num) => num * 2)
+}
 
 /**
  * * Please use the higher order function filter to solve this problem.
@@ -81,7 +86,8 @@ const doubleValues = (arr) => {
  */
 const onlyEvenValues = (arr) => {
   // Write your answer here
-};
+  return arr.filter((num) => num % 2 === 0)
+}
 
 /**
  * Create a function called removeVowels which accepts a string and returns a new string with all of the vowels (both uppercase and lowercase) removed.
@@ -103,7 +109,15 @@ const onlyEvenValues = (arr) => {
  */
 const removeVowels = (str) => {
   // Write your answer here
-};
+  let vowels = ['a', 'e', 'i', 'o', 'u']
+  str = str
+    .toLowerCase()
+    .split('')
+    .filter((letter) => !vowels.includes(letter))
+    .join('')
+
+  return str
+}
 
 /**
  * Solve this problem using the ternary operator.
@@ -113,18 +127,17 @@ const removeVowels = (str) => {
 
 const getIsHungryText = () => {
   //don't change this variable
-  let isStomachEmpty = false;
+  let isStomachEmpty = false
   /* convert this if else statement into a ternary expression */
-
+  const isHungry = isStomachEmpty ? 'Go eat something.' : 'Keep coding!'
   // let isHungry;
   // if (isStomachEmpty) {
   //   isHungry = "Go eat something.";
   // } else {
   //   isHungry = "Keep coding!";
   // }
-
-  return isHungry;
-};
+  return isHungry
+}
 
 /**
  * Refactor this to use destructuring. For an example of destructuring,
@@ -137,14 +150,14 @@ const getTempOfTomorrow = () => {
   const AVG_TEMPERATURES = {
     today: 77.5,
     tomorrow: 79,
-  };
+  }
 
   // Start of what you should change
-  const today = AVG_TEMPERATURES.today;
-  const tomorrow = AVG_TEMPERATURES.tomorrow;
+  const today = AVG_TEMPERATURES.today
+  const tomorrow = AVG_TEMPERATURES.tomorrow
   // End of what you should change
-  return `Today's temperature is ${today}.\nTomorrow's temperature is ${tomorrow}`;
-};
+  return `Today's temperature is ${today}.\nTomorrow's temperature is ${tomorrow}`
+}
 
 /**
  * Please use the high order function reduce to solve this problem. For an example of reduce,
@@ -159,7 +172,7 @@ const getTempOfTomorrow = () => {
  */
 const addItems = (arr) => {
   // Write your answer here
-};
+}
 
 /**
  * Remove duplicate values from an array.
@@ -175,15 +188,15 @@ const addItems = (arr) => {
 const removeDuplicates = (array) => {
   // Write your answer here
   // Return an array of unique values
-};
+}
 
 /**
  * Ignore this. It is for the tests.
  */
 
-let greeter;
+let greeter
 try {
-  greeter = greet;
+  greeter = greet
 } catch (e) {
   // Normally it is bad practice to not handle the error.
   // However, I am just using try ... catch to get the unit test to work
@@ -200,4 +213,4 @@ export {
   getTempOfTomorrow,
   addItems,
   removeDuplicates,
-};
+}
