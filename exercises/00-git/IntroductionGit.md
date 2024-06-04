@@ -1,7 +1,11 @@
 # Instructors
-Jamal Taylor
 
+- Jamal Taylor
 - Matina
 
 # Students
-Ken Tealsey
+
+- Ken Tealsey
+- Michael Sementsov
+- Megan Starrington
+- Wade Wallace
