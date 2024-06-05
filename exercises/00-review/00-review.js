@@ -110,13 +110,11 @@ const onlyEvenValues = (arr) => {
 const removeVowels = (str) => {
   // Write your answer here
   let vowels = ['a', 'e', 'i', 'o', 'u']
-  str = str
+  return str
     .toLowerCase()
     .split('')
     .filter((letter) => !vowels.includes(letter))
     .join('')
-
-  return str
 }
 
 /**
