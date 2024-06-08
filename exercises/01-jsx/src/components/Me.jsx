@@ -1,3 +1,3 @@
 export default function Me() {
-  return <>My name is</>
+  return <>My name is Wade</>
 }

@@ -582,3 +582,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/vim,node,macos,react,windows,webstorm,reactnative,sublimetext,visualstudiocode
+.vscode/settings.json
+exercises/01-jsx/scratch.es6
+exercises/02-collections/.eslintrc.cjs
+exercises/02-collections/.babelrc
