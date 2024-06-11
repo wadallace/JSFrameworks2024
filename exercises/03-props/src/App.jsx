@@ -1,20 +1,15 @@
 import './App.css'
-// import something here
-import Welcome from './componenets/Welcome'
-import Heading from './componenets/Heading'
+import Heading from './componenets/Heading/Heading'
+import Welcome from './componenets/Welcome/Welcome'
 
-function App() {
+export default function App() {
   return (
     <div className='App'>
       <>
         <Heading>Welcome to my React App!</Heading>
-        <div>
-          <Welcome name='Jamal' />
-          <Welcome />
-        </div>
+        <Welcome name='Jamal' />
+        <Welcome />
       </>
     </div>
   )
 }
-
-export default App
