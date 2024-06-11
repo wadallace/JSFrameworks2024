@@ -1,5 +1,5 @@
 // You need this to complete the ES Modules exercise
-import greet from "./greet.js";
+import greet from './greet.js'
 
 /**
  *  Return the highest number in the array
@@ -13,27 +13,28 @@ import greet from "./greet.js";
 
 const highestNumber = (array) => {
   // Method 1
-  let highestNum = array[0];
+  let highestNum = array[0]
   for (let i = 0; i < array.length; i++) {
-    if (array[i] > highestNum) highestNum = array[i];
+    if (array[i] > highestNum) highestNum = array[i]
   }
-  return highestNum;
+  return highestNum
 
   // Method 2
+  // file deepcode ignore JavascriptDeadCode: <please specify a reason of ignoring this>
   array.sort((a, b) => {
-    return b - a;
-  });
-  return array[0];
+    return b - a
+  })
+  return array[0]
 
   // Method 3
-  return Math.max(...array);
+  return Math.max(...array)
 
   // Method 4
   return array.reduce((highestNum, num) => {
-    if (num > highestNum) highestNum = num;
-    return highestNum;
-  });
-};
+    if (num > highestNum) highestNum = num
+    return highestNum
+  })
+}
 
 /**
  * Combine an array by using the spread operator
@@ -45,8 +46,8 @@ const highestNumber = (array) => {
  **/
 
 const combineArray = (array1, array2) => {
-  return [...array1, ...array2];
-};
+  return [...array1, ...array2]
+}
 
 /**
  * Combine two objects into one
@@ -56,8 +57,8 @@ const combineArray = (array1, array2) => {
  */
 
 const combineObject = (obj1, obj2) => {
-  return { ...obj1, ...obj2 };
-};
+  return { ...obj1, ...obj2 }
+}
 
 /**
  * Please use the higher order function map to solve this problem.
@@ -69,12 +70,12 @@ const combineObject = (obj1, obj2) => {
 const doubleValues = (arr) => {
   // Method 1
   return arr.map((num) => {
-    return num * 2;
-  });
+    return num * 2
+  })
 
   // Method 2
-  return arr.map((num) => num * 2);
-};
+  return arr.map((num) => num * 2)
+}
 
 /**
  * * Please use the higher order function filter to solve this problem.
@@ -88,12 +89,12 @@ const doubleValues = (arr) => {
 const onlyEvenValues = (arr) => {
   // Method 1
   return arr.filter((arr) => {
-    return arr % 2 === 0;
-  });
+    return arr % 2 === 0
+  })
 
   // Method 2
-  return arr.filter((arr) => arr % 2 === 0);
-};
+  return arr.filter((arr) => arr % 2 === 0)
+}
 
 /**
  * Create a function called removeVowels which accepts a string and returns a new string with all of the vowels (both uppercase and lowercase) removed.
@@ -117,13 +118,13 @@ const removeVowels = (str) => {
   // Method 1
   return str
     .toLowerCase()
-    .split("")
-    .filter((letter) => !["a", "e", "i", "o", "u"].includes(letter))
-    .join("");
+    .split('')
+    .filter((letter) => !['a', 'e', 'i', 'o', 'u'].includes(letter))
+    .join('')
 
   // Method 2
-  return str.toLowerCase().replace(/[aeiou]/g, "");
-};
+  return str.toLowerCase().replace(/[aeiou]/g, '')
+}
 
 /**
  * Solve this problem using the ternary operator.
@@ -133,11 +134,11 @@ const removeVowels = (str) => {
 
 const getIsHungryText = () => {
   //don't change this variable
-  let isStomachEmpty = false;
+  let isStomachEmpty = false
   /* convert this if else statement into a ternary expression */
-  let isHungry = isStomachEmpty ? "Go eat something." : "Keep coding!";
-  return isHungry;
-};
+  let isHungry = isStomachEmpty ? 'Go eat something.' : 'Keep coding!'
+  return isHungry
+}
 
 /**
  * Refactor this to use destructuring. For an example of destructuring,
@@ -150,13 +151,13 @@ const getTempOfTomorrow = () => {
   const AVG_TEMPERATURES = {
     today: 77.5,
     tomorrow: 79,
-  };
+  }
 
   // Start of what you should change
-  const { today, tomorrow } = AVG_TEMPERATURES;
+  const { today, tomorrow } = AVG_TEMPERATURES
   // End of what you should change
-  return `Today's temperature is ${today}.\nTomorrow's temperature is ${tomorrow}`;
-};
+  return `Today's temperature is ${today}.\nTomorrow's temperature is ${tomorrow}`
+}
 
 /**
  * Please use the high order function reduce to solve this problem. For an example of reduce,
@@ -172,12 +173,12 @@ const getTempOfTomorrow = () => {
 const addItems = (arr) => {
   // Method 1
   return arr.reduce((sum, num) => {
-    return sum + num;
-  });
+    return sum + num
+  })
 
   // Method 2
-  return arr.reduce((sum, num) => sum + num);
-};
+  return arr.reduce((sum, num) => sum + num)
+}
 
 /**
  * Remove duplicate values from an array.
@@ -192,16 +193,16 @@ const addItems = (arr) => {
 
 const removeDuplicates = (array) => {
   /** Return the an array of unique values */
-  return [...new Set(array)];
-};
+  return [...new Set(array)]
+}
 
 /**
  * Ignore this. It is for the tests.
  */
 
-let greeter;
+let greeter
 try {
-  greeter = greet;
+  greeter = greet
 } catch (e) {
   // Normally it is bad practice to not handle the error.
   // However, I am just using try ... catch to get the unit test to work
@@ -218,4 +219,4 @@ export {
   getTempOfTomorrow,
   addItems,
   removeDuplicates,
-};
+}
