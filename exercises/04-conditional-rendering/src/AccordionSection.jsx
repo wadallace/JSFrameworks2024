@@ -1,5 +1,5 @@
 export default function Accordion({ isOpen, title, paragraph }) {
-  let [titleClass, transitionClass, contentClass] =
+  const [titleClassObj, transitionClassObj, contentClassObj] =
     isOpen === true
       ? [
           { titleClass: 'title active' },
@@ -14,12 +14,12 @@ export default function Accordion({ isOpen, title, paragraph }) {
 
   return (
     <>
-      <div className={titleClass}>
+      <div className={titleClassObj.titleClass}>
         <i className='dropdown icon'></i>
         {title}
       </div>
-      <div className={contentClass}>
-        <p className={transitionClass}>{paragraph}</p>
+      <div className={contentClassObj.contentClass}>
+        <p className={transitionClassObj.transitionClass}>{paragraph}</p>
       </div>
     </>
   )
