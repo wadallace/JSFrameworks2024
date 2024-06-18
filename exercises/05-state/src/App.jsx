@@ -1,6 +1,7 @@
 import './App.css'
 import DiceRoller from './components/DiceRoll/DiceRoll'
 import LessText from './components/LessText/LessText'
+import Subscribe from './components/Subscribe/Subscribe'
 // Import LessText here
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
           <h1 className='h3'>Challenge 2 - Dice Roll</h1>
           <DiceRoller />
         </div>
+      </div>
+      <div className='m-5'>
+        <Subscribe />
       </div>
     </>
   )
