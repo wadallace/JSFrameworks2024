@@ -2,13 +2,13 @@ import { useState } from 'react'
 
 export default function CharacterCount() {
   const [value, setValue] = useState('')
-  const [count, setCount] = useState(0)
 
   const handleChange = (e) => {
     e.preventDefault()
     setValue(e.target.value)
-    setCount(e.target.value.length)
   }
+
+  const count = value.length
 
   return (
     <>
@@ -17,6 +17,7 @@ export default function CharacterCount() {
         id='inputArea'
         onChange={handleChange}
         value={value}
+        className='form-control'
       ></textarea>
       <div>Character Count: {count}</div>
     </>
