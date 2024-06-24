@@ -7,9 +7,10 @@ export default function GuessTheNumber() {
   const randomNumber = Math.floor(Math.random() * 10 + 1)
 
   const compareNumber = (guess) => {
-    if (guess === randomNumber) {
+    const compareGuess = parseInt(guess)
+    if (compareGuess === randomNumber) {
       return 'Correct! You win!'
-    } else if (guess < randomNumber) {
+    } else if (compareGuess < randomNumber) {
       return `Too low! The correct number was ${randomNumber}`
     } else {
       return `Too high! The correct number was ${randomNumber}`
