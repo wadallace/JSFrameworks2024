@@ -4,7 +4,7 @@ export default function GuessTheNumber() {
   const [guess, setGuess] = useState('')
   const [submitted, setIsSubmitted] = useState(false)
   const [result, setResult] = useState('')
-  const randomNumber = Math.floor(Math.random() * 100)
+  const randomNumber = Math.floor(Math.random() * 10 + 1)
 
   const compareNumber = (guess) => {
     if (guess === randomNumber) {
@@ -22,9 +22,11 @@ export default function GuessTheNumber() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    guess.length > 0 && setIsSubmitted(true)
-    const comparisonResult = compareNumber(guess)
-    setResult(comparisonResult)
+    if (guess.length > 0) {
+      setIsSubmitted(true)
+      const comparisonResult = compareNumber(guess)
+      setResult(comparisonResult)
+    }
   }
 
   const handleReset = (e) => {
@@ -48,7 +50,7 @@ export default function GuessTheNumber() {
         <button type='submit'>Guess</button>
         <button onClick={handleReset}>Reset Game</button>
       </form>
-      {submitted && <div>{result}</div>}
+      <div>{result}</div>
     </>
   )
 }
