@@ -51,7 +51,7 @@ export default function GuessTheNumber() {
         <button type='submit'>Guess</button>
         <button onClick={handleReset}>Reset Game</button>
       </form>
-      <div>{result}</div>
+      <div>{submitted && result}</div>
     </>
   )
 }
