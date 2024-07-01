@@ -14,7 +14,7 @@ Using your command line, you will need to navigate to the this folder, install a
 cd exercises/08-crud/
 code . # if you would like to open this in a separate VSCode window
 npm install
-npm start
+npm run dev
 ```
 
 To stop the application, press `ctrl+c`.
