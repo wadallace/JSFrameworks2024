@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './AddressForm.css'
 import PropTypes from 'prop-types'
 
@@ -72,6 +71,7 @@ function AddressForm({
           className='form-control'
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
+          required
         />
       </div>
       <div className='mb-3'>
@@ -88,6 +88,7 @@ function AddressForm({
           className='form-control'
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
+          required
         />
       </div>
       <div className='mb-3'>
@@ -104,6 +105,7 @@ function AddressForm({
           className='form-control'
           value={address}
           onChange={(e) => setAddress(e.target.value)}
+          required
         />
         <p className='help-block text-muted'>
           Street address, P.O. box, company name, c/o
@@ -124,6 +126,7 @@ function AddressForm({
           className='form-control'
           value={city}
           onChange={(e) => setCity(e.target.value)}
+          required
         />
       </div>
       <div className='mb-3'>
@@ -139,6 +142,7 @@ function AddressForm({
           className='form-control'
           value={state}
           onChange={(e) => setState(e.target.value)}
+          required
         >
           <option></option>
           {states.map((state, idx) => {
@@ -161,6 +165,7 @@ function AddressForm({
           className='form-control'
           value={zipcode}
           onChange={(e) => setZipcode(e.target.value)}
+          required
         />
       </div>
 
@@ -177,26 +182,13 @@ function AddressForm({
           className='form-control'
           value={country}
           onChange={(e) => setCountry(e.target.value)}
+          required
         >
           <option></option>
           {countries.map((state, idx) => {
             return <option key={`state-${idx}`}>{state}</option>
           })}
         </select>
-      </div>
-      <div className='mb-3'>
-        <input
-          id='confirm'
-          name='confirm'
-          type='checkbox'
-          className='form-check-input'
-        />
-        <label
-          htmlFor='confirm'
-          className='form-check-label'
-        >
-          Sign Up For Newsletter
-        </label>
       </div>
 
       <button
