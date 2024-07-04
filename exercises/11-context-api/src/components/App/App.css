@@ -1,0 +1,9 @@
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+.container {
+  max-width: 800px;
+}
