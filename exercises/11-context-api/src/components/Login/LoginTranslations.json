@@ -1,0 +1,12 @@
+{
+  "en": {
+    "Email": "Email",
+    "Password": "Password",
+    "Login In": "Login In"
+  },
+  "es": {
+    "Email": "Correos electrónicos",
+    "Password": "Contraseña",
+    "Login In": "Iniciar sesión"
+  }
+}

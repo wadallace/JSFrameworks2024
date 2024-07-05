@@ -1,0 +1,22 @@
+{
+  "en": {
+    "Create a New Account": "Create a New Account",
+    "It’s quick and easy.": "It’s quick and easy.",
+    "First Name": "First Name",
+    "Last Name": "Last Name",
+    "Email": "Email",
+    "Password": "Password",
+    "By clicking Sign Up, you agree to our Terms, Data Policy and Cookies Policy. You may receive SMS Notifications from us and can opt out any time.": "By clicking Sign Up, you agree to our Terms, Data Policy and Cookies Policy. You may receive SMS Notifications from us and can opt out any time.",
+    "Sign Up": "Sign Up"
+  },
+  "es": {
+    "Create a New Account": "Crea una cuenta",
+    "It’s quick and easy.": "Es rápido y fácil.",
+    "First Name": "Nombre",
+    "Last Name": "Apellido",
+    "Email": "Correos electrónicos",
+    "Password": "Contraseña",
+    "By clicking Sign Up, you agree to our Terms, Data Policy and Cookies Policy. You may receive SMS Notifications from us and can opt out any time.": "Al hacer clic en \"Registrarte\", aceptas nuestras Condiciones, la Política de datos y la Política de cookies. Es posible que te enviemos notificaciones por SMS, que puedes desactivar cuando quieras.",
+    "Sign Up": "Registrarte"
+  }
+}
