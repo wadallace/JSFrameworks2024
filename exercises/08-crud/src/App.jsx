@@ -6,23 +6,36 @@ const GroceryList = () => {
   const [groceryItem, setGroceryItem] = useState('')
   const [cost, setCost] = useState('')
   const [error, setError] = useState(false)
-
   const [groceryList, setGroceryList] = useState([])
+  const [totalCost, setTotalCost] = useState(0)
 
   const addItem = () => {
-    const newItem = { groceryItem: groceryItem, cost: cost }
+    const newItem = { groceryItem: groceryItem, cost: parseFloat(cost) }
     setGroceryList([...groceryList, newItem])
+    return newItem
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
     if (cost && groceryItem) {
-      addItem()
+      const newItem = addItem()
+      addTotalCost(newItem)
       setGroceryItem('')
       setCost('')
+      setError(false)
+
+      // Call this after adding the item
     } else {
       setError(true)
     }
+  }
+  const clearList = () => {
+    setGroceryList([])
+    setTotalCost(0)
+  }
+
+  const addTotalCost = (newItem) => {
+    setTotalCost((prevTotal) => prevTotal + newItem.cost)
   }
 
   return (
@@ -112,12 +125,13 @@ const GroceryList = () => {
           </tbody>
         </table>
         <p className='lead'>
-          <strong>Total Cost: {/* Complete me */}</strong>
+          <strong>Total Cost: ${totalCost.toFixed(2)}</strong>
         </p>
         <div className='d-flex justify-content-end'>
           <button
             type='button'
             className='btn btn-outline-success'
+            onClick={clearList}
           >
             Clear
           </button>

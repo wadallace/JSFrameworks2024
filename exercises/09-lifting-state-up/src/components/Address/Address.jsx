@@ -27,7 +27,6 @@ function Address() {
     <>
       {displayResults ? (
         <AddressResults
-          displayResults={displayResults}
           firstName={firstName}
           lastName={lastName}
           address={address}
