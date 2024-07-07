@@ -11,6 +11,7 @@ function Languages() {
    * one of the language buttons below.
    */
   const [language, setLanguage] = useContext(TranslatorContext);
+
   return (
     <>
       {/**
@@ -18,6 +19,7 @@ function Languages() {
        * @see exercises/08a-context-api/src/App.jsx
        * @see solutions/08a-context-api/App.solutions.jsx
        */}
+
       <button
         type="button"
         className="btn btn-link btn-sm"
