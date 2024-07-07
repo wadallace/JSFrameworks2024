@@ -34,6 +34,14 @@ const GroceryList = () => {
     setTotalCost(0)
   }
 
+  const removeItem = (index) => {
+    const itemToRemove = groceryList[index]
+    setGroceryList((prevGroceryList) =>
+      prevGroceryList.filter((_, item) => item !== index)
+    )
+    setTotalCost((prevTotal) => prevTotal - itemToRemove.cost)
+  }
+
   const addTotalCost = (newItem) => {
     setTotalCost((prevTotal) => prevTotal + newItem.cost)
   }
@@ -116,6 +124,8 @@ const GroceryList = () => {
                   <button
                     aria-label='Delete'
                     title='Delete'
+                    type='button'
+                    onClick={() => removeItem(index)}
                   >
                     &times;
                   </button>
