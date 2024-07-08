@@ -1,3 +1,4 @@
+/* eslint-disable semi */
 // Import what you need from React here
 // You will need to import the "TranslatorContext" and "TranslatorProvider" from src/contexts/TranslatorContext.js
 import './App.css'

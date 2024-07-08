@@ -1,3 +1,4 @@
+/* eslint-disable semi */
 // Import what you need from React
 import translations from './CreateAccountTranslations.json'
 // Import "TranslatorContext"

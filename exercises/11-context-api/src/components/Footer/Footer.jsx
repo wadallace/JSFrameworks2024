@@ -1,6 +1,9 @@
+/* eslint-disable semi */
 // Import what you need from React
-import Languages from "../Languages/Languages";
-import translations from "./FooterTranslations.json";
+import Languages from '../Languages/Languages'
+import translations from './FooterTranslations.json'
+import { useContext } from 'react'
+import { TranslatorContext } from '../../contexts/TranslatorContext'
 // Import "TranslatorContext"
 
 function Footer() {
@@ -9,20 +12,21 @@ function Footer() {
    * @see exercises/08a-context-api/src/App.jsx
    * @see solutions/08a-context-api/App.solutions.jsx
    */
+  const [language] = useContext(TranslatorContext)
 
   /**
    * Replace "en" with a constant or variable.
    */
-  const t = translations["en"];
+  const t = translations[language]
 
   /**
    * You do not have to change anything below this line.
    */
   return (
-    <div className="bg-light text-center pt-2 pb-2">
+    <div className='bg-light text-center pt-2 pb-2'>
       <div>
         <small>
-          {t["No One"]} &copy; {new Date().getFullYear()}
+          {t['No One']} &copy; {new Date().getFullYear()}
         </small>
       </div>
       <div>
@@ -31,7 +35,7 @@ function Footer() {
         </small>
       </div>
     </div>
-  );
+  )
 }
 
-export default Footer;
+export default Footer
