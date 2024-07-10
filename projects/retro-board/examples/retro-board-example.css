@@ -1,0 +1,156 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: #555;
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+.button {
+  display: inline-block;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.button-default {
+  padding: 0.25rem;
+  background-color: #eee;
+}
+.button-default:active,
+.button-default:focus,
+.button-default:hover {
+  background-color: #ddd;
+}
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+.textbox {
+  font: inherit;
+  color: inherit;
+}
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.65;
+}
+::-moz-placeholder {
+  color: inherit;
+  opacity: 0.65;
+}
+:-ms-input-placeholder {
+  color: inherit;
+  opacity: 0.65;
+}
+:-moz-placeholder {
+  color: inherit;
+  opacity: 0.65;
+}
+.content {
+  max-width: 1200px;
+  padding: 0 0.25rem;
+  margin: auto;
+}
+.content.column {
+  max-width: 640px;
+}
+@media (min-width: 640px) {
+  .RetroApp {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -0.25rem;
+  }
+  .RetroApp.column {
+    flex-direction: column;
+  }
+}
+@media (min-width: 640px) {
+  .RetroCategory {
+    padding: 0 0.25rem;
+  }
+}
+.RetroCategory {
+  flex: 1 1;
+}
+.ButtonAdd {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.RetroCard {
+  color: #fff;
+  padding: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+.RetroCategory-1 .RetroCard {
+  background-color: #019588;
+}
+.RetroCategory-2 .RetroCard {
+  background-color: #e91e63;
+}
+.RetroCategory-3 .RetroCard {
+  background-color: #9c28b0;
+}
+.RetroCard .button {
+  background: transparent;
+  opacity: 0.65;
+  font-size: 0.75rem;
+  padding: 0.25rem;
+}
+.RetroCard .button:hover {
+  opacity: 1;
+}
+.RetroCard .textbox {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  padding: 0.25rem;
+  margin-bottom: 0.5rem;
+  resize: none;
+}
+.RetroCard .textbox:hover {
+  /**
+   * While it is typically better to include an image as a separate file,
+   * I'm base64 encoding because a lot of students of students will copy this CSS,
+   * not knowing that they need to include the "pen.svg" file, and it causes their application to crash.
+   * I got the pen icon from Font Awesome.
+   */
+  background: hsla(0, 0%, 100%, 0.2)
+    url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+PHBhdGggZD0iTTkgNS4zTDEwLjYgN2wtNC4xIDQuMS0xLjYtMS42TDkgNS4zem0yLjgtLjNsLS43LS43Yy0uMy0uMy0uNy0uMy0xIDBsLS43LjZMMTEgNi42bC44LS44Yy4zLS4zLjMtLjYgMC0uOHpNNCAxMS44YzAgLjEuMS4yLjIuMmwxLjgtLjUtMS42LTEuNi0uNCAxLjl6IiBmaWxsPSIjZmZmIi8+PC9zdmc+")
+    100% 0/27px no-repeat;
+  cursor: pointer;
+}
+.RetroCard .textbox:active {
+  background-color: hsla(0, 0%, 100%, 0.25);
+}
+.RetroCard .textbox:active,
+.RetroCard .textbox:focus {
+  background-color: #fff;
+  color: #333;
+  cursor: auto;
+}
+.RetroCard .textbox.invalid {
+  background-color: #fff;
+}
+.RetroCard .textbox.invalid::-webkit-input-placeholder {
+  color: #e91e63;
+  opacity: 1;
+}
+.RetroCard .textbox.invalid::-moz-placeholder {
+  color: #e91e63;
+  opacity: 1;
+}
+.RetroCard .textbox.invalid:-ms-input-placeholder {
+  color: #e91e63;
+  opacity: 1;
+}
+.RetroCard .textbox.invalid:-moz-placeholder {
+  color: #e91e63;
+  opacity: 1;
+}
