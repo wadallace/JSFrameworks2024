@@ -1,10 +1,8 @@
 /* eslint-disable semi */
-// Import useEffect here
 import { useEffect, useState } from 'react'
 import './App.css'
 import ronSwansonImage from './assests/ronswanson.png'
 import axios from 'axios'
-// import Axios (or use Fetch)
 
 function App() {
   const [quote, setQuote] = useState('')
@@ -28,8 +26,6 @@ function App() {
   useEffect(() => {
     getQuote()
   }, [])
-
-
 
   return (
     <body className='bg-warning text-center'>
