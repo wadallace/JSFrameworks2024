@@ -9,7 +9,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
   const [hasError, setHasError] = useState(false)
 
-  const getQuote = async () => {
+  const fetchQuote = async () => {
     setIsLoading(true)
     try {
       const { data } = await axios.get(
@@ -24,7 +24,7 @@ function App() {
   }
 
   useEffect(() => {
-    getQuote()
+    fetchQuote()
   }, [])
 
   return (
@@ -39,7 +39,9 @@ function App() {
       <div className='container'>
         {isLoading && <div className='text-center'>Loading...</div>}
         {hasError && (
-          <div className='text-center error'>Error loading quote</div>
+          <div className='text-center error'>
+            Oops! An unexpected error has occurred.
+          </div>
         )}
         <blockquote
           id='quote'
