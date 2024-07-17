@@ -586,3 +586,5 @@ $RECYCLE.BIN/
 exercises/01-jsx/scratch.es6
 exercises/02-collections/.eslintrc.cjs
 exercises/02-collections/.babelrc
+exercises/13-use-effect/bun.lockb
+exercises/13-use-effect/package.json
