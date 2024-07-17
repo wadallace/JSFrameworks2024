@@ -33,8 +33,11 @@ function App() {
     <div className='App'>
       <h1>Dogs</h1>
 
-      <select onChange={(e) => setSelectedNumber(e.target.value)}
-        id="number of dogs">
+      <select
+        value={selectedNumber}
+        onChange={(e) => setSelectedNumber(e.target.value)}
+        id='number of dogs'
+      >
         <option value='1'>1</option>
         <option value='2'>2</option>
         <option value='3'>3</option>
