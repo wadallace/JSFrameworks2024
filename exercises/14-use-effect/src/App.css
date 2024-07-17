@@ -1,0 +1,49 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#title-head {
+  color: white;
+  font-family: Futura;
+  font-size: 64px;
+  line-height: 1.35;
+  min-height: 86.4px;
+  margin: 0;
+}
+#body {
+  background-color: black;
+  color: white;
+  font-family: Futura;
+  font-size: 12px;
+  text-align: center;
+  height: 100vh;
+}
+#main-img {
+  margin: auto;
+  padding: 10px;
+  background-color: #48bcc9;
+  color: white;
+  border-radius: 15px;
+}
+#timeline {
+  border-radius: 15px;
+  background-color: black;
+}
+img:hover {
+  border: solid 0.3px black;
+}
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+div > p {
+  text-decoration: none;
+  font-size: 24px;
+}
