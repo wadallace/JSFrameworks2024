@@ -1,23 +1,25 @@
-import { useState } from 'react'
+import { FormEvent, FormEventHandler, useState } from 'react'
 import './App.css'
 // Import here
 import countries from './assets/countries.json'
 import states from './assets/states.json'
 
 function App() {
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [addressLine1, setAddressLine1] = useState('')
-  const [city, setCity] = useState('')
-  const [state, setState] = useState('')
-  const [postalCode, setPostalCode] = useState('')
-  const [country, setCountry] = useState('')
-  const [didSignUp, setDidSignUp] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
+  const [form, setForm] = useState({
+    firstName: '',
+    lastName: '',
+    addressLine1: '',
+    city: '',
+    state: '',
+    postalCode: '',
+    country: '',
+    didSignUp: false,
+    submitted: false,
+  })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent): void => {
     e.preventDefault()
-    setSubmitted(true)
+    setForm({ ...form, submitted: true })
   }
 
   const stateOptions = states.map((state) => (
@@ -57,8 +59,8 @@ function App() {
           name='firstName'
           type='text'
           className='form-control'
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
+          value={form.firstName}
+          onChange={(e) => setForm({ ...form, firstName: e.target.value })}
         />
       </div>
       <div className='mb-3'>
@@ -73,8 +75,8 @@ function App() {
           name='lastName'
           type='text'
           className='form-control'
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
+          value={form.lastName}
+          onChange={(e) => setForm({ ...form, lastName: e.target.value })}
         />
       </div>
       <div className='mb-3'>
@@ -82,15 +84,15 @@ function App() {
           htmlFor='addressLine1'
           className='control-label'
         >
-          Address Line 1
+          Street Address
         </label>
         <input
           id='addressLine1'
-          name='addressLine1'
+          name='Street'
           type='text'
           className='form-control'
-          value={addressLine1}
-          onChange={(e) => setAddressLine1(e.target.value)}
+          value={form.addressLine1}
+          onChange={(e) => setForm({ ...form, addressLine1: e.target.value })}
         />
         <p className='help-block text-muted'>
           Street Address, P.O. Box, Company Name, C/O
@@ -108,8 +110,8 @@ function App() {
           name='city'
           type='text'
           className='form-control'
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
+          value={form.city}
+          onChange={(e) => setForm({ ...form, city: e.target.value })}
         />
       </div>
       <div className='mb-3'>
@@ -123,8 +125,8 @@ function App() {
           id='state'
           name='state'
           className='form-control'
-          value={state}
-          onChange={(e) => setState(e.target.value)}
+          value={form.state}
+          onChange={(e) => setForm({ ...form, state: e.target.value })}
         >
           <option value=''>Select a state</option>
           {stateOptions}
@@ -142,8 +144,8 @@ function App() {
           name='postalCode'
           type='text'
           className='form-control'
-          value={postalCode}
-          onChange={(e) => setPostalCode(e.target.value)}
+          value={form.postalCode}
+          onChange={(e) => setForm({ ...form, postalCode: e.target.value })}
         />
       </div>
       <div className='mb-3'>
@@ -157,8 +159,8 @@ function App() {
           id='country'
           name='country'
           className='form-control'
-          value={country}
-          onChange={(e) => setCountry(e.target.value)}
+          value={form.country}
+          onChange={(e) => setForm({ ...form, country: e.target.value })}
         >
           <option value=''>Select a country</option>
           {countryOptions}
@@ -170,8 +172,8 @@ function App() {
           name='signUpForNewsLetter'
           type='checkbox'
           className='form-check-input'
-          value={didSignUp}
-          onChange={(e) => setDidSignUp(e.target.checked)}
+          checked={form.didSignUp}
+          onChange={(e) => setForm({ ...form, didSignUp: e.target.checked })}
         />
         <label
           htmlFor='signUpForNewsLetter'
@@ -186,25 +188,25 @@ function App() {
       >
         Submit
       </button>
-      {submitted && (
+      {form.submitted && (
         <>
           <div className='mt-4 mb-0 fw-bold'>Results:</div>
           <div className='card card-body bg-light mt-2 mb-4'>
             <ul className='list-unstyled mb-0'>
-              <li>First Name: {firstName}</li>
-              <li>Last Name: {lastName}</li>
-              <li>Address Line 1: {addressLine1}</li>
-              <li>City: {city}</li>
-              <li>State: {state}</li>
-              <li>Postal Code: {postalCode}</li>
-              <li>Country: {country}</li>
+              <li>First Name: {form.firstName}</li>
+              <li>Last Name: {form.lastName}</li>
+              <li>Street Address: {form.addressLine1}</li>
+              <li>City: {form.city}</li>
+              <li>State: {form.state}</li>
+              <li>Postal Code: {form.postalCode}</li>
+              <li>Country: {form.country}</li>
             </ul>
           </div>
         </>
       )}
       <div className='mb-4'>
-        {submitted &&
-          (didSignUp
+        {form.submitted &&
+          (form.didSignUp
             ? 'Thank you for signing up for our newsletter!'
             : 'Please sign up for our newsletter!')}
       </div>

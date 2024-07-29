@@ -1,13 +1,12 @@
-import React from 'react'
-
 type WelcomeProps = {
   name?: string
 }
 
-export default function Welcome({ name = 'user' }) {
+export default function Welcome({ name = 'user' }: WelcomeProps) {
   return (
     <>
       <div>Hello {name}</div>
     </>
   )
 }
+
