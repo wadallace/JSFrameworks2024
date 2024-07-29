@@ -1,9 +1,8 @@
-html,
-body,
-#root,
-.cover {
-  height: 100%;
+*, #root {
+  height: screen;
+  background-color: hsl(45, 100%, 50%);
 }
+
 .blockquote {
   border-radius: 5px;
   font-family: "Kavivanar", cursive;

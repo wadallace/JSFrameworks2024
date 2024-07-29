@@ -28,29 +28,29 @@ function App() {
   }, [])
 
   return (
-    <body className='bg-warning text-center'>
-      <img
-        src={ronSwansonImage}
-        alt=''
-        width='450'
-        height='423'
-        className='mt-4'
-      />
-      <div className='container'>
-        {isLoading && <div className='text-center'>Loading...</div>}
-        {hasError && (
-          <div className='text-center error'>
-            Oops! An unexpected error has occurred.
-          </div>
-        )}
-        <blockquote
-          id='quote'
-          className='blockquote bg-dark text-white border-0 mb-4'
-        >
-          {quote}
-        </blockquote>
+      <div className='bg-warning text-center'>
+        <img
+          src={ronSwansonImage}
+          alt=''
+          width='450'
+          height='423'
+          className='mt-4'
+        />
+        <div className='container'>
+          {isLoading && <div className='text-center'>Loading...</div>}
+          {hasError && (
+            <div className='text-center error'>
+              Oops! An unexpected error has occurred.
+            </div>
+          )}
+          <blockquote
+            id='quote'
+            className='blockquote bg-dark text-white border-0 mb-4'
+          >
+            {quote}
+          </blockquote>
+        </div>
       </div>
-    </body>
   )
 }
 
