@@ -1,4 +1,4 @@
-import { FormEvent, FormEventHandler, useState } from 'react'
+import { FormEvent, useState } from 'react'
 import './App.css'
 // Import here
 import countries from './assets/countries.json'
