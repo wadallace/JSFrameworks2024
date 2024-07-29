@@ -1,5 +1,4 @@
 import './App.css'
-import React from 'react'
 import Heading from './componenets/Heading/Heading'
 import Welcome from './componenets/Welcome/Welcome'
 
