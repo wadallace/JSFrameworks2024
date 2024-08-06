@@ -1,0 +1,50 @@
+{
+  "page": 1,
+  "perPage": 6,
+  "total": 12,
+  "totalPages": 2,
+  "data": [
+    {
+      "id": 1,
+      "email": "george.bluth@reqres.in",
+      "firstName": "George",
+      "lastName": "Bluth",
+      "avatar": "https://randomuser.me/api/portraits/men/74.jpg"
+    },
+    {
+      "id": 2,
+      "email": "janet.weaver@reqres.in",
+      "firstName": "Janet",
+      "lastName": "Weaver",
+      "avatar": "https://randomuser.me/api/portraits/women/18.jpg"
+    },
+    {
+      "id": 3,
+      "email": "emma.wong@reqres.in",
+      "firstName": "Emma",
+      "lastName": "Wong",
+      "avatar": "https://randomuser.me/api/portraits/women/2.jpg"
+    },
+    {
+      "id": 4,
+      "email": "eve.holt@reqres.in",
+      "firstName": "Eve",
+      "lastName": "Holt",
+      "avatar": "https://randomuser.me/api/portraits/women/34.jpg"
+    },
+    {
+      "id": 5,
+      "email": "charles.morris@reqres.in",
+      "firstName": "Charles",
+      "lastName": "Morris",
+      "avatar": "https://randomuser.me/api/portraits/men/17.jpg"
+    },
+    {
+      "id": 6,
+      "email": "tracey.ramos@reqres.in",
+      "firstName": "Tracey",
+      "lastName": "Ramos",
+      "avatar": "https://randomuser.me/api/portraits/women/77.jpg"
+    }
+  ]
+}

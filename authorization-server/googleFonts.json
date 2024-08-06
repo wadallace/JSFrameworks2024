@@ -1,0 +1,52 @@
+{
+  "fonts": [
+    {
+      "id": 1,
+      "displayName": "Roboto",
+      "fontFamily": "Roboto, serif",
+      "stylesheet": "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    },
+    {
+      "id": 2,
+      "displayName": "Montserrat",
+      "fontFamily": "Montserrat, serif",
+      "stylesheet": "https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+    },
+    {
+      "id": 3,
+      "displayName": "Lora",
+      "fontFamily": "Lora, serif",
+      "stylesheet": "https://fonts.googleapis.com/css2?family=Lora&display=swap"
+    },
+    {
+      "id": 4,
+      "displayName": "Raleway",
+      "fontFamily": "Raleway, serif",
+      "stylesheet": "https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+    },
+    {
+      "id": 5,
+      "displayName": "Indie Flower",
+      "fontFamily": "'Indie Flower', serif",
+      "stylesheet": "https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+    },
+    {
+      "id": 6,
+      "displayName": "Playfair Display",
+      "fontFamily": "'Playfair Display', serif",
+      "stylesheet": "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+    },
+    {
+      "id": 7,
+      "displayName": "Inconsolata",
+      "fontFamily": "Inconsolata, serif",
+      "stylesheet": "https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
+    },
+    {
+      "id": 8,
+      "displayName": "Quicksand",
+      "fontFamily": "Quicksand, serif",
+      "stylesheet": "https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+    }
+  ]
+}
