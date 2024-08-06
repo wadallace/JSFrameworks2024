@@ -37,7 +37,7 @@ function Category() {
           products.map((product, index) => {
             return (
               <div className="col mb-4" key={`product-${index}`}>
-                <img src={product.image} alt="" className="mb-3" />
+                <img src={`/${product.image}`} alt="" className="mb-3" />
                 <div>{product.description}</div>
                 <strong>$ {product.price.toFixed(2)}</strong>
               </div>
