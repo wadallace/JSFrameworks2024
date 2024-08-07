@@ -1,0 +1,8 @@
+.ThankYou {
+  min-height: 75vh;
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+.ThankYou h1 {
+  font-size: clamp(2.23125rem, 10vw, 5rem);
+}
