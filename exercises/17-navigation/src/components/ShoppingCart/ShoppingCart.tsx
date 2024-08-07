@@ -1,16 +1,18 @@
-import { useState, FormEvent } from "react";
-import NavBar from "../NavBar/NavBar";
-import "./ShoppingCart.css";
+import { useState, FormEvent } from 'react'
+import NavBar from '../NavBar/NavBar'
+import './ShoppingCart.css'
 // Import something
+import { useNavigate } from 'react-router-dom'
 
 function ShoppingCart() {
   /**
    * Add something here
    */
+  const navigate = useNavigate()
 
-  const [cardholderName, setCardholderName] = useState("");
-  const [cardNumber, setCardNumber] = useState("");
-  const [cvvNumber, setCvvNumber] = useState("");
+  const [cardholderName, setCardholderName] = useState('')
+  const [cardNumber, setCardNumber] = useState('')
+  const [cvvNumber, setCvvNumber] = useState('')
 
   /**
    * Handle the form.
@@ -21,56 +23,70 @@ function ShoppingCart() {
    * they will not see this page.
    */
 
+  const handleForm = (e: FormEvent) => {
+    e.preventDefault()
+    navigate('/thank-you', { replace: true })
+  }
+
   return (
     <>
       <NavBar />
-      <div className="uk-container">
-        <form className="ShoppingCart" method="POST">
-          <fieldset className="uk-fieldset">
-            <legend className="uk-legend">Checkout</legend>
+      <div className='uk-container'>
+        <form
+          className='ShoppingCart'
+          method='POST'
+        >
+          <fieldset className='uk-fieldset'>
+            <legend className='uk-legend'>Checkout</legend>
 
-            <div className="uk-margin">
+            <div className='uk-margin'>
               <input
-                className="uk-input"
-                type="text"
-                placeholder="Cardholder Name"
-                aria-label="Cardholder Name"
+                className='uk-input'
+                type='text'
+                placeholder='Cardholder Name'
+                aria-label='Cardholder Name'
                 value={cardholderName}
                 onChange={(e) => setCardholderName(e.target.value)}
               />
             </div>
 
-            <div className="uk-grid-small uk-grid">
-              <div className="uk-width-3-4@s">
+            <div className='uk-grid-small uk-grid'>
+              <div className='uk-width-3-4@s'>
                 <input
-                  className="uk-input"
-                  type="number"
-                  placeholder="Card Number"
-                  aria-label="Card Number"
+                  className='uk-input'
+                  type='number'
+                  placeholder='Card Number'
+                  aria-label='Card Number'
                   value={cardNumber}
                   onChange={(e) => setCardNumber(e.target.value)}
                 />
               </div>
-              <div className="uk-width-1-4@s">
+              <div className='uk-width-1-4@s'>
                 <input
-                  className="uk-input"
-                  type="number"
-                  placeholder="CVV"
-                  aria-label="CVV"
+                  className='uk-input'
+                  type='number'
+                  placeholder='CVV'
+                  aria-label='CVV'
                   value={cvvNumber}
                   onChange={(e) => setCvvNumber(e.target.value)}
                 />
               </div>
             </div>
 
-            <div className="uk-margin">
-              <button className="uk-button uk-button-primary">Checkout</button>
+            <div className='uk-margin'>
+              <button
+                type='submit'
+                className='uk-button uk-button-primary'
+                onClick={handleForm}
+              >
+                Checkout
+              </button>
             </div>
           </fieldset>
         </form>
       </div>
     </>
-  );
+  )
 }
 
-export default ShoppingCart;
+export default ShoppingCart
