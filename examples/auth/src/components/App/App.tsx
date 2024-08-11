@@ -1,4 +1,4 @@
-import { useState, FormEvent, ChangeEvent } from "react";
+import { useState, FormEvent } from "react";
 import Home from "../Home/Home";
 import axios from "axios";
 import { ILoginResponse } from "../../types/login";
@@ -104,9 +104,7 @@ function App() {
                   className="form-control mr-3"
                   required={true}
                   value={username}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    setUsername(e.target.value)
-                  }
+                  onChange={(e) => setUsername(e.target.value)}
                 />
               </div>
               <div className="mb-2">
@@ -118,9 +116,7 @@ function App() {
                   className="form-control mr-3"
                   required={true}
                   value={password}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    setPassword(e.target.value)
-                  }
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
               <button
