@@ -1,4 +1,6 @@
-import { useState, ChangeEvent } from 'react'
+import axios, { AxiosError } from 'axios'
+import { useState, ChangeEvent, FormEvent } from 'react'
+import Home from '../Home/Home'
 // import something here
 // import Axios (or use Fetch)
 
@@ -14,18 +16,68 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
 
+  const [token, setToken] = useState('')
+
   /**
    * Complete all the logging in and logout logic
    */
+
+  const login = async (username: string, password: string) => {
+    setIsLoading(true)
+    try {
+      const { data } = await axios.post(
+        // If you don't proxy the URL, you would have to use
+        // http://localhost:3000/api/login
+        '/api/login',
+        {
+          username,
+          password,
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      )
+      // This is how you get the access token
+      console.log(data.token)
+      setToken(data.token)
+    } catch (error) {
+      if ((error as AxiosError).response?.status === 401) {
+        setIsLoading(false)
+        setErrorMessage('Invalid username or password')
+      }
+      return
+    }
+    setIsLoading(false)
+    setUsername('')
+    setPassword('')
+    setErrorMessage('')
+  }
 
   /**
    * If the user is logged in, you should render the <Home /> component instead.
    *
    */
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const logout = () => {
+    setToken('')
+  }
+
+  if (token) {
+    return (
+      <Home
+        token={token}
+        logout={logout}
+      />
+    )
+  }
+
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    setIsLoading(true)
+    setUsername(username)
+    setPassword(password)
+    login(username, password)
   }
 
   return (
