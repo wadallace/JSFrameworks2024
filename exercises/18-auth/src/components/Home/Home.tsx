@@ -26,7 +26,6 @@ function Home({ token, logout }: HomeProps) {
           Authorization: `Bearer ${token}`,
         },
       })
-      console.log(data)
       setMovies(data)
     } catch (error) {
       if ((error as AxiosError).response?.status === 401) {
