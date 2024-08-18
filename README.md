@@ -30,7 +30,7 @@ Whenever you are ready to submit your work, you will need to [commit your work, 
 
 ## Resources
 
-- Projects: [First Project: Retro Board](projects/retro-board/README.md)
+- Projects: [First Project: Retro Board](projects/retro-board/README.md) | [Final Project: Book Store](projects/final-project/README.md)
 - Installation Guide: [Mac](docs/InstallationGuideMac.md) | [Windows](docs/InstallationGuideWindows.md) | [Linux](docs/InstallationGuideLinuxAndNVM.md)
 - React: [Beginner's Code](https://www.freecodecamp.org/news/react-beginners-guide/) | [Manual](https://reactjs.org/) | [Vite.js](https://vitejs.dev/)
 - JavaScript - [MDN](https://developer.mozilla.org/en-US/) (Unofficial JavaScript Manual) | [Tutorials](https://javascript.info/)
