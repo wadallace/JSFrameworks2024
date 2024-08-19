@@ -28,7 +28,21 @@ To begin, click the link below:
 
 - [Book store](https://github.com/AlbanyCanCodeCourses/BookStoreProject.git)
 
-Fork the repo and clone your forked version in someplace that you will remember it (e.g. _~/Documents_). Open the folder in Visual Studio Code. Open your terminal and install the server.
+Fork the repo and clone your forked version in someplace that you will remember it (e.g. _~/Documents_). Open the folder in Visual Studio Code. Open your terminal.
+
+Get your current node version with `node -v`. Then update your _package.json_ so that your project is locked to the correct version.
+
+```json
+// package.json
+{
+  // ...
+  "engines": {
+    "node": "20.x" // Update this if not current node version
+  }
+  // ...
+```
+
+Now, install the project:
 
 ```
 npm install
@@ -231,6 +245,10 @@ While your grade is not determined on whether or not you follow these code quali
 - No errors should appear in the console.
 - Remove any components or code that is not being used. (This affects application load time as well as code quality.)
 - Use proper indentation. (Prettier can take care of this.)
+
+## Hosting Your Project
+
+You will need to host a demo of your final project. You must choose a host that will allow you to deploy a Node.js web service. I recommend Render.com because it meets this criteria and has a free tier available. Note that with the free tier, your demo will take a long time to load if it has been inactive for more than 15 minutes. [See how to get started on Render.com](doc/DeployOnRender.md).
 
 ## Project Help
 
