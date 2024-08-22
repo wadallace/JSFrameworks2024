@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import axios from "axios";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, keepPreviousData } from "@tanstack/react-query";
 
 const getCharacter = async (id) => {
   const { data } = await axios.get(
@@ -19,6 +19,8 @@ function App({ characters, isPendingCharacters, isCharactersError }) {
   const { data, isPending, isError } = useQuery({
     queryKey: ["singleCharacter", characterId],
     queryFn: () => getCharacter(characterId),
+    placeholderData: keepPreviousData,
+    staleTime: 30000, // Store data (cache) for 30 seconds. With this setting, Tanstack query will use stored data instead of refetching when state changes.
   });
 
   return (

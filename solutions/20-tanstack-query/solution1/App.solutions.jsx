@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import axios from "axios";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, keepPreviousData } from "@tanstack/react-query";
 
 const fetchCharacters = async () => {
   const { data } = await axios.get("https://rickandmortyapi.com/api/character");
@@ -40,6 +40,8 @@ function App() {
   } = useQuery({
     queryKey: ["singleCharacter", characterId],
     queryFn: () => getCharacter(characterId),
+    placeholderData: keepPreviousData,
+    staleTime: 30000, // Store data (cache) for 30 seconds. With this setting, Tanstack query will use stored data instead of refetching when state changes.
   });
 
   const isLoading = isPending || isCharacterPending;
